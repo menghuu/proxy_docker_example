@@ -7,3 +7,4 @@ services:
     ports:
       - "51999:51999"
       - "51998:51998"
+    restart: always

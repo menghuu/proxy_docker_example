@@ -13,3 +13,7 @@ It works, but it could be better
 - shadowsocks port is `51998`
 
 - vmess port is `51999`
+
+- keep in mind that: docker and docker-compose should be installed previously on your server
+
+- you should also make sure docker always start when system reboot like: `systemctl enable docker`, if you want this instance start automatically
