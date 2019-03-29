@@ -1,0 +1,9 @@
+version: '3'
+services:
+  v2ray:
+    build:
+      context: .
+      dockerfile: v2ray_Dockerfile
+    ports:
+      - "51999:51999"
+      - "51998:51998"
