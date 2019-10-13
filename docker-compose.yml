@@ -1,10 +1,22 @@
-version: '3'
+version: '3.2'
 services:
   v2ray:
     build:
-      context: .
-      dockerfile: v2ray_Dockerfile
+      context: ./proxy
     ports:
       - "51999:51999"
       - "51998:51998"
     restart: always
+    volumes:
+      - type: bind
+        source: ./proxy/v2ray_config.json
+        target: /v2ray/config.json
+  frps:
+    build:
+      context: ./frps
+    ports:
+      - "55000-65000"
+      - "5000:5000"
+    restart: always
+    volumes:
+      - ./frps/frps.ini:/conf/frps.ini
