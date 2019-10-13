@@ -16,4 +16,4 @@ RUN set -ex && \
 
 VOLUME /conf
 
-ENTRYPOINT ["/usr/local/frps/frps", "-c", "/conf/frps.ini", "--verbose"]
+ENTRYPOINT ["/usr/local/frps/frps", "-c", "/conf/frps.ini"]

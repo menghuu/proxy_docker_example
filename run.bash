@@ -6,4 +6,4 @@
 # Distributed under terms of the MIT license.
 #
 
-DOCKER_OPTS="--registry-mirror=http://hub-mirror.c.163.com" docker-compose up --force-recreate
+DOCKER_OPTS="--registry-mirror=http://hub-mirror.c.163.com" docker-compose up --force-recreate --build -d

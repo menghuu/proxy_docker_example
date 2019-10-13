@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.7'
 services:
   v2ray:
     build:
@@ -15,8 +15,11 @@ services:
     build:
       context: ./frps
     ports:
-      - "55000-65000"
+            #- "55000-60000:55000-60000"
       - "5000:5000"
+      - "50000:51000"
     restart: always
     volumes:
-      - ./frps/frps.ini:/conf/frps.ini
+      - type: bind
+        source: ./frps/frps.ini
+        target: /conf/frps.ini
